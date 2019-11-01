@@ -252,6 +252,13 @@
       var sideLength = this.get('n');
 
       // while columnIndex does not equal board.length - 1 (board.length - 1 means we're at the end of the board)
+      /*
+      [0, 0, 0, 0],   - - >
+      [0, 0, 0, 0],
+      [0, 0, 0, 1],  - - -> 
+      [0, 0, 1, 0]   - - -> rowIndex++; && columnIndex--;
+      */
+
       while(columnIndex !== 0 && rowIndex !== sideLength - 1) {
         rowIndex++;
         columnIndex--;
